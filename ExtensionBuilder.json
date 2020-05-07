@@ -1,0 +1,85 @@
+{
+    "modules": [
+        {
+            "config": {
+                "position": [
+                    31,
+                    58
+                ]
+            },
+            "name": "New Model Object",
+            "value": {
+                "actionGroup": {
+                    "_default0_list": false,
+                    "_default1_show": false,
+                    "_default2_new_create": false,
+                    "_default3_edit_update": false,
+                    "_default4_delete": false,
+                    "customActions": [
+                        "index"
+                    ]
+                },
+                "name": "Display",
+                "objectsettings": {
+                    "addDeletedField": true,
+                    "addHiddenField": true,
+                    "addStarttimeEndtimeFields": true,
+                    "aggregateRoot": false,
+                    "categorizable": false,
+                    "description": "",
+                    "mapToTable": "",
+                    "parentClass": "",
+                    "sorting": false,
+                    "type": "Entity",
+                    "uid": "7480561105"
+                },
+                "propertyGroup": {
+                    "properties": []
+                },
+                "relationGroup": {
+                    "relations": []
+                }
+            }
+        }
+    ],
+    "properties": {
+        "backendModules": [],
+        "description": "Extension with plugin for display of PhotoStation 6.0 albums (stored on a Synology DiskStation) in TYPO3 frontend",
+        "emConf": {
+            "category": "plugin",
+            "custom_category": "",
+            "dependsOn": "typo3 => 8.7.0-8.7.99\n",
+            "disableLocalization": false,
+            "disableVersioning": false,
+            "skipGenerateDocumentationTemplate": false,
+            "sourceLanguage": "en",
+            "state": "stable",
+            "targetVersion": "8.7.0-8.7.99",
+            "version": "1.0.0"
+        },
+        "extensionKey": "wok_photostation",
+        "name": "PhotoStation",
+        "originalExtensionKey": "wok_photostation",
+        "originalVendorName": "Wok",
+        "persons": [],
+        "plugins": [
+            {
+                "actions": {
+                    "controllerActionCombinations": "Display => index",
+                    "noncacheableActions": "Display => index",
+                    "switchableActions": ""
+                },
+                "description": "Plugin for display of PhotoStation 6.0 albums (stored on a Synology DiskStation) in TYPO3 frontend",
+                "key": "albumdisplay",
+                "name": "PhotoStation album display"
+            }
+        ],
+        "vendorName": "Wok"
+    },
+    "wires": [],
+    "log": {
+        "last_modified": "2018-03-22 01:59",
+        "extension_builder_version": "8.7.0",
+        "be_user": " (1)"
+    }
+}

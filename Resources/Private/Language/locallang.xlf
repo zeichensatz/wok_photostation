@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-03-22T13:59:39Z" product-name="wok_photostation">
+		<header/>
+		<body>
+			<trans-unit id="tx_wokphotostation_domain_model_display">
+				<source>Display</source>
+			</trans-unit>
+			<trans-unit id="javascriptWarning">
+				<source>JavaSript is needed for display of the PhotoStation album!</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

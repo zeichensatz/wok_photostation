@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-03-22T07:29:09Z" product-name="wok_photostation">
+		<header/>
+		<body>
+			<trans-unit id="tx_wokphotostation_domain_model_display">
+				<source>Display</source>
+				<target>Display</target>
+			</trans-unit>
+			<trans-unit id="javascriptWarning">
+				<source>JavaSript is needed for display of the PhotoStation album!</source>
+				<target>Es wird JavaSript für die Anzeige des PhotoStation Albums benötigt!</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

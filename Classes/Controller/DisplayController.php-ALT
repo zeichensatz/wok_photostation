@@ -1,0 +1,67 @@
+<?php
+namespace Wok\WokPhotostation\Controller;
+
+/***
+ *
+ * This file is part of the "PhotoStation" Extension for TYPO3 CMS.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE.txt file that was distributed with this source code.
+ *
+ *  (c) 2018
+ *
+ ***/
+
+/**
+ * DisplayController
+ */
+class DisplayController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
+{
+	/**
+	 * Initializes the current action
+	 *
+	 * @return void
+	 */
+	public function initializeAction()
+	{
+
+		$newline = "\n";
+		$jsSourceFile = "";
+		$cssFile = "";
+
+		// Für die Einbindung der GPXViewer JavaScript-Datei in den Header (NICHT IN DEN FOOTER, da sonst eventuell die Lightbox nicht schnell genug geladen ist!
+		$jsSourceFile = '<script src="' . $GLOBALS['TSFE']->tmpl->getFileName($this->settings['jsSourceFile']) . '" type="text/javascript"></script>';
+		$GLOBALS['TSFE']->additionalHeaderData['tx_' . $this->request->getControllerExtensionKey()] = $jsSourceFile;
+
+		// Für die Einbindung der GPXViewer CSS-Datei
+		$cssFile = '<link rel="stylesheet" href="' . $GLOBALS['TSFE']->tmpl->getFileName($this->settings['cssFile']) . '" />';
+		$GLOBALS['TSFE']->additionalFooterData['tx_' . $this->request->getControllerExtensionKey()] = $cssFile;
+
+		// Header und Footer werden bei jedem neuen CE überschrieben!
+	}
+
+
+	/**
+	 * action index
+	 *
+	 * @return void
+	 */
+	public function indexAction()
+	{
+
+		// Werte aus Flexform auslesen
+		$info = $this->settings['info'];
+		$album = $this->settings['album'];
+		$description = $this->settings['description'];
+
+		// Werte zuweisen
+		$this->view->assign('info', $info);
+		$this->view->assign('album', $album);
+		$this->view->assign('description', $description);
+
+		// uid auslesen und zuweisen
+		$uid = $this->configurationManager->getContentObject()->data['uid'];
+		$this->view->assign('uid', $uid);
+
+	}
+}

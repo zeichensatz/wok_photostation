@@ -1,0 +1,14 @@
+{
+    "name": "wok/wok-photostation",
+    "type": "typo3-cms-extension",
+    "description": "Extension with plugin for display of PhotoStation 6.0 albums (stored on a Synology DiskStation) in TYPO3 frontend",
+    "authors": [],
+    "require": {
+        "typo3/cms-core": "^8.7.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Wok\\WokPhotostation\\": "Classes"
+        }
+    }
+}
