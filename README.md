@@ -14,6 +14,6 @@ The PhotoStation albums have to be public!
 * Create a new page or use an existing one
 * Create an extension template for that page or edit an existing template and "Include static (from extensions)" for PhotoStation (wok_photostation)
 * Change to Constant Editor and edit the settings for PHOTOSTATION
-** At least you have to edit the constant `plugin.tx_wokphotostation_albumdisplay.photostation.server` to your own DiskStation server
-* Now you can create a content element of type plugin and then selecte "PhotoStation album display"
-* In the tab Plug-in you have to edit the PhotoStation album hash, which should be in the format `album_57425f32303131303330305f54616977616e5f5075626c6963`. You can get from your public album's context menu "Embed album" in the field HTML-Code. You also can easily copy it from the browser href since it's the last part of the PhotoStation page name.
+  * At least you have to edit the constant `plugin.tx_wokphotostation_albumdisplay.photostation.server` to your own DiskStation server
+* Now you can create a content element of type plugin and then select "PhotoStation album display"
+* In the tab Plug-in you have to edit the PhotoStation album hash, which should be in the format `album_57425f32303131303330305f54616977616e5f5075626c6963`. You can get it from your public album's context menu "Embed album" in the field HTML-Code. You also can easily copy it from the browser href since it's the last part.

@@ -55,7 +55,11 @@ overwriteSettings:
       Language: merge
       #Templates: keep
       Templates:
-          Index.html keep
+          Index.html: keep
+    Public:
+      Icons:
+          Extension.svg: keep
+          user_plugin_albumdisplay.svg: keep
 
 
   user_extension.svg: keep
