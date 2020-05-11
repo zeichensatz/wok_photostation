@@ -34,7 +34,19 @@
                     "uid": "7480561105"
                 },
                 "propertyGroup": {
-                    "properties": []
+                    "properties": [
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "albumhash",
+                            "propertyType": "String",
+                            "uid": "1401177860342"
+                        }
+                    ]
                 },
                 "relationGroup": {
                     "relations": []
@@ -54,14 +66,21 @@
             "skipGenerateDocumentationTemplate": false,
             "sourceLanguage": "en",
             "state": "stable",
-            "targetVersion": "8.7.0-8.7.99",
+            "targetVersion": "9.5.0-9.5.99",
             "version": "1.0.0"
         },
         "extensionKey": "wok_photostation",
         "name": "PhotoStation",
         "originalExtensionKey": "wok_photostation",
         "originalVendorName": "Wok",
-        "persons": [],
+        "persons": [
+            {
+                "company": "ZeichenSATZ",
+                "email": "info@zeichensatz.de",
+                "name": "Wolfgang Kleinbach",
+                "role": "Developer"
+            }
+        ],
         "plugins": [
             {
                 "actions": {
@@ -78,8 +97,8 @@
     },
     "wires": [],
     "log": {
-        "last_modified": "2018-03-22 01:59",
-        "extension_builder_version": "8.7.0",
-        "be_user": " (1)"
+        "last_modified": "2020-05-11 03:51",
+        "extension_builder_version": "9.10.2",
+        "be_user": "Wolfgang Kleinbach (4)"
     }
 }

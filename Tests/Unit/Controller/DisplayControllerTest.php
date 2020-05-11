@@ -3,8 +3,10 @@ namespace Wok\WokPhotostation\Tests\Unit\Controller;
 
 /**
  * Test case.
+ *
+ * @author Wolfgang Kleinbach <info@zeichensatz.de>
  */
-class DisplayControllerTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
+class DisplayControllerTest extends \TYPO3\TestingFramework\Core\Unit\UnitTestCase
 {
     /**
      * @var \Wok\WokPhotostation\Controller\DisplayController

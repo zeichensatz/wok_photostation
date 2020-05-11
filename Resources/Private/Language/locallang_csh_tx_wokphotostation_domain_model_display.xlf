@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:wok_photostation/Resources/Private/Language/locallang_csh" date="2020-05-11T15:51:56Z" product-name="wok_photostation">
+		<header/>
+		<body>
+			<trans-unit id="albumhash.description" resname="albumhash.description">
+				<source>albumhash</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

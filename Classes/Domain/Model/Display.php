@@ -1,6 +1,7 @@
 <?php
 namespace Wok\WokPhotostation\Domain\Model;
 
+
 /***
  *
  * This file is part of the "PhotoStation" Extension for TYPO3 CMS.
@@ -11,10 +12,37 @@ namespace Wok\WokPhotostation\Domain\Model;
  *  (c) 2018
  *
  ***/
-
 /**
  * Display
  */
 class Display extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 {
+
+    /**
+     * albumhash
+     * 
+     * @var string
+     */
+    protected $albumhash = '';
+
+    /**
+     * Returns the albumhash
+     * 
+     * @return string $albumhash
+     */
+    public function getAlbumhash()
+    {
+        return $this->albumhash;
     }
+
+    /**
+     * Sets the albumhash
+     * 
+     * @param string $albumhash
+     * @return void
+     */
+    public function setAlbumhash($albumhash)
+    {
+        $this->albumhash = $albumhash;
+    }
+}

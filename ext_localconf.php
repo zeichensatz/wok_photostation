@@ -17,25 +17,25 @@ call_user_func(
             ]
         );
 
-    // wizards
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-        'mod {
-            wizards.newContentElement.wizardItems.plugins {
-                elements {
-                    albumdisplay {
-                        iconIdentifier = wok_photostation-plugin-albumdisplay
-                        title = LLL:EXT:wok_photostation/Resources/Private/Language/locallang_db.xlf:tx_wok_photostation_albumdisplay.name
-                        description = LLL:EXT:wok_photostation/Resources/Private/Language/locallang_db.xlf:tx_wok_photostation_albumdisplay.description
-                        tt_content_defValues {
-                            CType = list
-                            list_type = wokphotostation_albumdisplay
+        // wizards
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+            'mod {
+                wizards.newContentElement.wizardItems.plugins {
+                    elements {
+                        albumdisplay {
+                            iconIdentifier = wok_photostation-plugin-albumdisplay
+                            title = LLL:EXT:wok_photostation/Resources/Private/Language/locallang_db.xlf:tx_wok_photostation_albumdisplay.name
+                            description = LLL:EXT:wok_photostation/Resources/Private/Language/locallang_db.xlf:tx_wok_photostation_albumdisplay.description
+                            tt_content_defValues {
+                                CType = list
+                                list_type = wokphotostation_albumdisplay
+                            }
                         }
                     }
+                    show = *
                 }
-                show = *
-            }
-       }'
-    );
+           }'
+        );
 		$iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
 		
 			$iconRegistry->registerIcon(

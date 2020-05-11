@@ -3,8 +3,10 @@ namespace Wok\WokPhotostation\Tests\Unit\Domain\Model;
 
 /**
  * Test case.
+ *
+ * @author Wolfgang Kleinbach <info@zeichensatz.de>
  */
-class DisplayTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
+class DisplayTest extends \TYPO3\TestingFramework\Core\Unit\UnitTestCase
 {
     /**
      * @var \Wok\WokPhotostation\Domain\Model\Display
@@ -25,8 +27,25 @@ class DisplayTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
     /**
      * @test
      */
-    public function dummyTestToNotLeaveThisFileEmpty()
+    public function getAlbumhashReturnsInitialValueForString()
     {
-        self::markTestIncomplete();
+        self::assertSame(
+            '',
+            $this->subject->getAlbumhash()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setAlbumhashForStringSetsAlbumhash()
+    {
+        $this->subject->setAlbumhash('Conceived at T3CON10');
+
+        self::assertAttributeEquals(
+            'Conceived at T3CON10',
+            'albumhash',
+            $this->subject
+        );
     }
 }

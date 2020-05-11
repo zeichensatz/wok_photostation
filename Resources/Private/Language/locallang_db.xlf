@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2018-03-22T13:59:39Z" product-name="wok_photostation">
+	<file source-language="en" datatype="plaintext" original="EXT:wok_photostation/Resources/Private/Language/locallang_db" date="2020-05-11T15:51:56Z" product-name="wok_photostation">
 		<header/>
 		<body>
-			<trans-unit id="tx_wokphotostation_domain_model_display">
+			<trans-unit id="tx_wokphotostation_domain_model_display" resname="tx_wokphotostation_domain_model_display">
 				<source>Display</source>
 			</trans-unit>
-			<trans-unit id="tx_wok_photostation_albumdisplay.name">
+			<trans-unit id="tx_wokphotostation_domain_model_display.albumhash" resname="tx_wokphotostation_domain_model_display.albumhash">
+				<source>Albumhash</source>
+			</trans-unit>
+			<trans-unit id="tx_wok_photostation_albumdisplay.name" resname="tx_wok_photostation_albumdisplay.name">
 				<source>PhotoStation album display</source>
 			</trans-unit>
-			<trans-unit id="tx_wok_photostation_albumdisplay.description">
+			<trans-unit id="tx_wok_photostation_albumdisplay.description" resname="tx_wok_photostation_albumdisplay.description">
 				<source>Plugin for display of PhotoStation 6.0 albums (stored on a Synology DiskStation) in TYPO3 frontend</source>
 			</trans-unit>
 		</body>
