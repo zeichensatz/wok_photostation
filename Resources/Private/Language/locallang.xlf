@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="EXT:wok_photostation/Resources/Private/Language/locallang" date="2020-05-12T08:57:54Z" product-name="wok_photostation">
+	<file source-language="en" datatype="plaintext" original="EXT:wok_photostation/Resources/Private/Language/locallang" date="2020-05-12T11:34:15Z" product-name="wok_photostation">
 		<header/>
 		<body>
 			<trans-unit id="tx_wokphotostation_domain_model_display" resname="tx_wokphotostation_domain_model_display">
