@@ -5,7 +5,7 @@ defined('TYPO3_MODE') || die();
  * Register plugin for selection in the backend plugin list
  */
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
-    'Wok.WokPhotostation',
+    'WokPhotostation',
     'Albumdisplay',
     'PhotoStation album display',
     'EXT:wok_photostation/Resources/Public/Icons/user_plugin_albumdisplay.svg'

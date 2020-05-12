@@ -6,14 +6,14 @@ call_user_func(
     {
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-            'Wok.WokPhotostation',
+            'WokPhotostation',
             'Albumdisplay',
             [
-                'Display' => 'index'
+                \Wok\WokPhotostation\Controller\DisplayController::class => 'index'
             ],
             // non-cacheable actions
             [
-                'Display' => 'index'
+                \Wok\WokPhotostation\Controller\DisplayController::class => 'index'
             ]
         );
 
