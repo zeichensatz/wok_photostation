@@ -21,3 +21,8 @@ $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist']['wokphotostat
     // Flexform configuration schema file
     'FILE:EXT:wok_photostation/Configuration/FlexForms/Albumdisplay.xml'
 );
+
+/***************
+ * Deactivate pages and recursive in tab "plugin" of content element 
+ */
+$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist']['wokphotostation_albumdisplay'] = 'pages,recursive';
