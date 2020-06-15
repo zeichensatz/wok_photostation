@@ -1,22 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2013-08-22T11:22:55Z" product-name="wok_photostation">
+	<file source-language="en" datatype="plaintext" original="EXT:wok_photostation/Resources/Private/Language/locallang_flexform" date="2020-06-15T10:35:00Z" product-name="wok_photostation">
 		<header/>
 		<body>
 			<trans-unit id="sheetTitle">
 				<source>Flexform for PhotoStation album</source>
+				<target>Flexform für PhotoStation Album</target>
 			</trans-unit>
 			<trans-unit id="info">
 				<source>PhotoStation album information (will not be displayed)</source>
+				<target>PhotoStation Album Information (wird nicht ausgegeben)</target>
 			</trans-unit>
 			<trans-unit id="album">
 				<source>PhotoStation album hash</source>
+				<target>PhotoStation Album Hash</target>
 			</trans-unit>
 			<trans-unit id="albumPlaceholder">
 				<source>album_????</source>
+				<target>album_????</target>
 			</trans-unit>
 			<trans-unit id="description">
 				<source>Description for the PhotoStation album</source>
+				<target>Beschreibung zum PhotoStation Album</target>
 			</trans-unit>
 		</body>
 	</file>
