@@ -4,7 +4,7 @@
     "description": "Extension with plugin for display of PhotoStation 6.0 albums (stored on a Synology DiskStation) in TYPO3 frontend",
     "authors": [],
     "require": {
-        "typo3/cms-core": "^9.5.17"
+        "typo3/cms-core": "^9.5.17 || ^10.4.19"
     },
     "autoload": {
         "psr-4": {
