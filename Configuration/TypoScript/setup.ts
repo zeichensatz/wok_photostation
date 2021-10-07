@@ -43,6 +43,7 @@ plugin.tx_wokphotostation_albumdisplay {
 }
 
 # these classes are only used in auto-generated templates
+/*
 plugin.tx_wokphotostation._CSS_DEFAULT_STYLE (
     textarea.f3-form-error {
         background-color:#FF9F9F;
@@ -75,3 +76,4 @@ plugin.tx_wokphotostation._CSS_DEFAULT_STYLE (
         color:green;
     }
 )
+*/
