@@ -13,8 +13,8 @@ namespace Wok\WokPhotostation\Controller;
  ***/
 
 // Müssen für die Umwandlung der Dateinamen aus den Settings eingebunden werden
-use \TYPO3\CMS\Frontend\Resource\FilePathSanitizer;
 use \TYPO3\CMS\Core\Utility\GeneralUtility;
+use \TYPO3\CMS\Core\Utility\PathUtility;
 
 /**
  * DisplayController
@@ -32,18 +32,17 @@ class DisplayController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
 		$newline = "\n";
 		$jsSourceFile = "";
 		$cssFile = "";
-
 		// Für die Einbindung der GPXViewer JavaScript-Datei in den Header (NICHT IN DEN FOOTER, da sonst eventuell die Lightbox nicht schnell genug geladen ist!
 		// Für die Umwandlung des Dateinamens aus den Settings müssen oben FilePathSanitizer und GeneralUtility mit use eingebunden werden
 		$jsSourceFile = '<script src="' . 
-				GeneralUtility::makeInstance(FilePathSanitizer::class)->sanitize((string)$this->settings['jsSourceFile']) . 
+				PathUtility::getAbsoluteWebPath(GeneralUtility::getFileAbsFileName($this->settings['jsSourceFile'])) .
 				'" type="text/javascript"></script>';
 		$GLOBALS['TSFE']->additionalHeaderData['tx_' . $this->request->getControllerExtensionKey()] = $jsSourceFile;
 
 		// Für die Einbindung der GPXViewer CSS-Datei
 		// Für die Umwandlung des Dateinamens aus den Settings müssen oben FilePathSanitizer und GeneralUtility mit use eingebunden werden
 		$cssFile = 	'<link rel="stylesheet" href="' . 
-				GeneralUtility::makeInstance(FilePathSanitizer::class)->sanitize((string)$this->settings['cssFile']) . 
+				PathUtility::getAbsoluteWebPath(GeneralUtility::getFileAbsFileName($this->settings['cssFile'])) .
 				'" />';
 		$GLOBALS['TSFE']->additionalFooterData['tx_' . $this->request->getControllerExtensionKey()] = $cssFile;
 
