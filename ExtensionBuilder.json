@@ -96,7 +96,7 @@
         "vendorName": "Wok"
     },
     "wires": [],
-    "storagePath": "\/netzwerk\/ZSweb.local\/vhosts\/test2\/typo3conf\/ext\/",
+    "storagePath": "\/netzwerk\/ZSweb.local\/vhosts\/test4\/typo3conf\/ext\/",
     "log": {
         "last_modified": "2020-05-12 11:34",
         "extension_builder_version": "9.11.0",

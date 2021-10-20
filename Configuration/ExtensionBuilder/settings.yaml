@@ -56,7 +56,8 @@ overwriteSettings:
       Language: keep
       #Templates: keep
       Templates:
-          Index.html: keep
+         Display:
+           Index.html: keep
     Public:
       Icons:
           Extension.svg: keep
