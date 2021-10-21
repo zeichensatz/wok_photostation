@@ -1,4 +1,7 @@
 <?php
+
+declare(strict_types=1);
+
 namespace Wok\WokPhotostation\Domain\Model;
 
 
@@ -12,6 +15,7 @@ namespace Wok\WokPhotostation\Domain\Model;
  *  (c) 2018
  *
  ***/
+
 /**
  * Display
  */
@@ -20,14 +24,14 @@ class Display extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * albumhash
-     * 
+     *
      * @var string
      */
     protected $albumhash = '';
 
     /**
      * Returns the albumhash
-     * 
+     *
      * @return string $albumhash
      */
     public function getAlbumhash()
@@ -37,7 +41,7 @@ class Display extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
 
     /**
      * Sets the albumhash
-     * 
+     *
      * @param string $albumhash
      * @return void
      */

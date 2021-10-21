@@ -1,15 +1,15 @@
 <?php
-defined('TYPO3_MODE') || die();
+defined('TYPO3') || die();
 
-/***************
- * Register plugin for selection in the backend plugin list
- */
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
     'WokPhotostation',
     'Albumdisplay',
-    'PhotoStation album display',
-    'EXT:wok_photostation/Resources/Public/Icons/user_plugin_albumdisplay.svg'
+    'PhotoStation album display'
 );
+## EXTENSION BUILDER DEFAULTS END TOKEN - Everything BEFORE this line is overwritten with the defaults of the extension builder
+/***************
+ * Above: Register plugin for selection in the backend plugin list
+ */
 
 /***************
  * Add flexForms for content element configuration

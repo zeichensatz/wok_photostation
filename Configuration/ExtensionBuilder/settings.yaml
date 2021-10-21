@@ -49,6 +49,10 @@ overwriteSettings:
   Configuration:
     #TCA merge not possible - use overrides directory
     TypoScript: keep
+    TCA:
+      Overrides:
+        tt_content.php: merge
+        sys_template.php: merge
 
   Resources:
     Private:
