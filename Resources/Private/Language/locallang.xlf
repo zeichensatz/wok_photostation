@@ -15,6 +15,90 @@
 				<source>JavaSript is needed for display of the PhotoStation album!</source>
 				<target>Es wird JavaSript für die Anzeige des PhotoStation Albums benötigt!</target>
 			</trans-unit>
+
+			<trans-unit id="constants.scss.PS_height.label" resname="constants.scss.PS_height.label">
+				<source>$PS_height: Height of PhotoStation content element.</source>
+				<target>$PS_height: Höhe des PhotoStation Content Elements.</target>
+			</trans-unit>
+			<trans-unit id="constants.scss.PS_width.label" resname="constants.scss.PS_width.label">
+				<source>$PS_width: Width of PhotoStation content element.</source>
+				<target>$PS_width: Breite des PhotoStation Content Elements.</target>
+			</trans-unit>
+			<trans-unit id="constants.scss.PS_bg_color.label" resname="constants.scss.PS_bg_color.label">
+				<source>$PS_bg_color: Background color of PhotoStation content element.</source>
+				<target>$PS_bg_color: Hintergrundfarbe des PhotoStation Content Elements.</target>
+			</trans-unit>
+			<trans-unit id="constants.scss.PS_padding.label" resname="constants.scss.PS_padding.label">
+				<source>$PS_padding: Width of border around images.</source>
+				<target>$PS_padding: Breite des Rahmens um die Bilder.</target>
+			</trans-unit>
+
+			<trans-unit id="constants.resources.jsSourceFile.label" resname="constants.resources.jsSourceFile.label">
+				<source>PhotoStation JavaScript Source File: Patched JavaScript file for Lightbox. Will only be included when constant lightbox is set!</source>
+				<target>PhotoStation JavaScript Quelldatei: Angepasste JavaScript-Datei für die Lightbox. Die Datei wird nur eingeschlossen, wenn die Konstante lightbox gesetzt ist!</target>
+			</trans-unit>
+			<trans-unit id="constants.resources.cssFile.label" resname="constants.resources.cssFile.label">
+				<source>PhotoStation CSS File: SCSS/CSS for PhotoStation. If you're using bootstrap_package, leave it to SCSS default file. Otherwise you may use the CSS from EXT:Resources/Public/CSS/custom.css (but you loose ability to use SCSS variables).</source>
+				<target>PhotoStation CSS File: SCSS/CSS Datei für PhotoStation. Wenn man das bootstrap_package verwendet, dann auf der Default SCSS-Datei lassen. Ansonsten das CSS von EXT:Resources/Public/CSS/custom.css verwenden, wobei man die Möglichkeit der Verwendung von SCSS Variablen verliert.</target>
+			</trans-unit>
+			<trans-unit id="constants.generalSettings.server.label" resname="constants.generalSettings.server.label">
+				<source>PhotoStation Server: Web server address of PhotoStation.</source>
+				<target>PhotoStation Server: Webserver Adresse von PhotoStation.</target>
+			</trans-unit>
+			<trans-unit id="constants.generalSettings.http.label" resname="constants.generalSettings.http.label">
+				<source>PhotoStation Server http/https switch: Switch between http/https. Lightbox will only work with https!!</source>
+				<target>PhotoStation Server http/https Schalter: Schalter zwischen http/https. Die Lightbox funktioniert nur mit https!!</target>
+			</trans-unit>
+			<trans-unit id="constants.generalSettings.pageString.label" resname="constants.generalSettings.pageString.label">
+				<source>PhotoStation Server string: Webpage string for PhotoStation (only change when you know what are you doing!)</source>
+				<target>PhotoStation Server string: Seitenaufruf für die PhotoStation (bitte nur ändern, wenn man wirklich weiß, was man tut!)</target>
+			</trans-unit>
+			<trans-unit id="constants.generalSettings.autoplay.label" resname="constants.generalSettings.autoplay.label">
+				<source>PhotoStation autoplay: Activate autoplay feature. Deactivate with empty string!</source>
+				<target>PhotoStation autoplay: Aktivierung des automatischen Starts. Deaktivierung durch keine Angabe!</target>
+			</trans-unit>
+			<trans-unit id="constants.generalSettings.openps.label" resname="constants.generalSettings.openps.label">
+				<source>PhotoStation link: Set a link to PhotoStation. Deactivate with empty string!</source>
+				<target>PhotoStation link: Link zur PhotoStation setzen. Deaktivierung durch keine Angabe!</target>
+			</trans-unit>
+			<trans-unit id="constants.generalSettings.lightbox.label" resname="constants.generalSettings.lightbox.label">
+				<source>PhotoStation lightbox: Activate lightbox feature. Deactivate with empty string!</source>
+				<target>PhotoStation lightbox: Aktivierung der Lightbox. Deaktivierung durch keine Angabe!</target>
+			</trans-unit>
+			<trans-unit id="constants.generalSettings.showDescription.label" resname="constants.generalSettings.showDescription.label">
+				<source>PhotoStation album description: Toggle for display of PhotoStation album description.</source>
+				<target>PhotoStation album description: Schalter zur Ausgabe der Beschreibung des PhotoStation Albums.</target>
+			</trans-unit>
+			<trans-unit id="constants.generalSettings.debug.label" resname="constants.generalSettings.debug.label">
+				<source>PhotoStation debug: Toggle for debugging. Displays settings.</source>
+				<target>PhotoStation debug: Schalter fürs Debuggen. Anzeige von settings.</target>
+			</trans-unit>
+
+			<trans-unit id="constants.templates.templateRootPath.label" resname="constants.templates.templateRootPath.label">
+				<source>Path to template root (FE).</source>
+				<target>Pfad zu den Templates (FE).</target>
+			</trans-unit>
+			<trans-unit id="constants.templates.partialRootPath.label" resname="constants.templates.partialRootPath.label">
+				<source>Path to template partials (FE).</source>
+				<target>Pfad zu den Template Partials (FE).</target>
+			</trans-unit>
+			<trans-unit id="constants.templates.layoutRootPath.label" resname="constants.templates.layoutRootPath.label">
+				<source>Path to template layouts (FE).</source>
+				<target>Pfad zu den Template Layouts (FE).</target>
+			</trans-unit>
+			<trans-unit id="constants.storage.storagePid.label" resname="constants.storage.storagePid.label">
+				<source>Default storage PID.</source>
+				<target>Voreingestellte Speicher Page-ID.</target>
+			</trans-unit>
+
+			<trans-unit id="constants.on.label" resname="constants.on.label">
+				<source>on</source>
+				<target>an</target>
+			</trans-unit>
+			<trans-unit id="constants.off.label" resname="constants.off.label">
+				<source>off</source>
+				<target>aus</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

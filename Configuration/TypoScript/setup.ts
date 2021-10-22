@@ -1,13 +1,13 @@
 plugin.tx_wokphotostation_albumdisplay {
 	settings {
 		jsSourceFile={$plugin.tx_wokphotostation_albumdisplay.photostation.jsSourceFile}
-		cssFile={$plugin.tx_wokphotostation_albumdisplay.photostation.cssFile}
-		server={$plugin.tx_wokphotostation_albumdisplay.photostation.server}
-		http={$plugin.tx_wokphotostation_albumdisplay.photostation.http}
-		pageString={$plugin.tx_wokphotostation_albumdisplay.photostation.pageString}
-		openps={$plugin.tx_wokphotostation_albumdisplay.photostation.openps}
-		autoplay={$plugin.tx_wokphotostation_albumdisplay.photostation.autoplay}
-		lightbox={$plugin.tx_wokphotostation_albumdisplay.photostation.lightbox}
+		cssFile = {$plugin.tx_wokphotostation_albumdisplay.photostation.cssFile}
+		server = {$plugin.tx_wokphotostation_albumdisplay.photostation.server}
+		http = {$plugin.tx_wokphotostation_albumdisplay.photostation.http}
+		pageString = {$plugin.tx_wokphotostation_albumdisplay.photostation.pageString}
+		openps = {$plugin.tx_wokphotostation_albumdisplay.photostation.openps}
+		autoplay = {$plugin.tx_wokphotostation_albumdisplay.photostation.autoplay}
+		lightbox = {$plugin.tx_wokphotostation_albumdisplay.photostation.lightbox}
 		showDescription = {$plugin.tx_wokphotostation_albumdisplay.photostation.showDescription}
 
 		// Fürs Debuggen
@@ -41,6 +41,31 @@ plugin.tx_wokphotostation_albumdisplay {
 	}
 
 }
+
+// Conditions for arguments
+[{$plugin.tx_wokphotostation_albumdisplay.photostation.openps} == true]
+	plugin.tx_wokphotostation_albumdisplay.settings.openps=&openps=1
+[else]
+	plugin.tx_wokphotostation_albumdisplay.settings.openps >
+[end]
+[{$plugin.tx_wokphotostation_albumdisplay.photostation.autoplay} == true]
+	plugin.tx_wokphotostation_albumdisplay.settings.autoplay=&autoplay=1
+[else]
+	plugin.tx_wokphotostation_albumdisplay.settings.autoplay >
+[end]
+[{$plugin.tx_wokphotostation_albumdisplay.photostation.lightbox} == true]
+	plugin.tx_wokphotostation_albumdisplay.settings.lightbox=&lightbox=1
+[else]
+	plugin.tx_wokphotostation_albumdisplay.settings.lightbox >
+[end]
+
+page {
+	// Includes the scss/css file
+	includeCSS {
+		wok_photostation-theme = {$plugin.tx_wokphotostation_albumdisplay.photostation.cssFile}
+	}
+}
+
 
 # these classes are only used in auto-generated templates
 /*

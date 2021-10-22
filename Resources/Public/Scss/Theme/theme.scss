@@ -1,0 +1,48 @@
+/*!
+ * wok_photostation
+ */
+
+//
+// Variables
+//
+@import "variables";
+
+/* Photo Station 6 */
+.photostation {
+	padding-top: 0;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+#photos {
+	width: calc(#{$PS_width} / 2);
+	height: calc(#{$PS_height} / 2);
+	background-color: $PS_bg_color;
+	padding: $PS_padding;
+	z-index: 1100;
+}
+
+/* Media queries */
+@media (max-width: 767px) {
+	#photos {
+		width: 100%;
+		height: calc(#{$PS_height} * 0.57);
+	}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	#photos {
+		width: calc(#{$PS_width} * 0.83);
+		height: calc(#{$PS_height} * 0.57);
+	}
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+	#photos {
+		width: $PS_width;
+		height: $PS_height;
+	}
+}
+@media (min-width: 1200px) {
+	#photos {
+		width: $PS_width;
+		height: $PS_height;
+	}
+}

@@ -39,13 +39,16 @@ class DisplayController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
 				'" type="text/javascript"></script>';
 		$GLOBALS['TSFE']->additionalHeaderData['tx_' . $this->request->getControllerExtensionKey()] = $jsSourceFile;
 
+/*
+EINBINDUNG VON CSS ERFOLGT MIT INCLUDE.CSS IM TYPOSCRIPT-SETUP
+Damit wird zwar das Photostation-CSS immer eingebunden, aber das ist nicht so dramatisch.
 		// Für die Einbindung der GPXViewer CSS-Datei
 		// Für die Umwandlung des Dateinamens aus den Settings müssen oben FilePathSanitizer und GeneralUtility mit use eingebunden werden
 		$cssFile = 	'<link rel="stylesheet" href="' . 
 				PathUtility::getAbsoluteWebPath(GeneralUtility::getFileAbsFileName($this->settings['cssFile'])) .
 				'" />';
 		$GLOBALS['TSFE']->additionalFooterData['tx_' . $this->request->getControllerExtensionKey()] = $cssFile;
-
+*/
 		// Header und Footer werden bei jedem neuen CE überschrieben!
 	}
 
