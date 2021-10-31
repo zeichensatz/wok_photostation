@@ -7,6 +7,18 @@
 //
 @import "variables";
 
+/* Bootstrap */
+/* position has to be static when Photo Station will be used. Otherwise the lightbox will be displayed at the position of the last "relavitve" element */
+
+/* This is needed for Bootstrap_package 8.0.6 */
+.col-md-3, .col-md-9 {
+	position: static;
+}
+/* This is needed for Bootstrap_package 10.0.5 */
+.frame-container, .frame-inner, .frame {
+	position: static;
+}
+
 /* Photo Station 6 */
 .photostation {
 	padding-top: 0;
