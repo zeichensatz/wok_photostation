@@ -60,6 +60,15 @@ Damit wird zwar das Photostation-CSS immer eingebunden, aber das ist nicht so dr
 	 */
 	public function indexAction()
 	{
+		if(!isset($this->settings['info'])) {
+			$this->settings['info'] = '';
+		};
+		if(!isset($this->settings['album'])) {
+			$this->settings['album'] = '';
+		};
+		if(!isset($this->settings['description'])) {
+			$this->settings['description'] = '';
+		};
 
 		// Werte aus Flexform auslesen
 		$info = $this->settings['info'];
