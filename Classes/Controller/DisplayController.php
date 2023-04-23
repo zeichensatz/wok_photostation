@@ -86,5 +86,7 @@ Damit wird zwar das Photostation-CSS immer eingebunden, aber das ist nicht so dr
 		$uid = $this->configurationManager->getContentObject()->data['uid'];
 		$this->view->assign('uid', $uid);
 
+		return $this->htmlResponse();
+
 	}
 }
