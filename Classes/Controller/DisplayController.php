@@ -83,6 +83,7 @@ Damit wird zwar das Photostation-CSS immer eingebunden, aber das ist nicht so dr
 		// uid auslesen und zuweisen
 		// This might throw a deprecation message which can be ignored, see here:
 		// https://stackoverflow.com/questions/56463377/deprecationmessage-getting-content-object-in-controller
+		// @extensionScannerIgnoreLine
 		$uid = $this->configurationManager->getContentObject()->data['uid'];
 		$this->view->assign('uid', $uid);
 
