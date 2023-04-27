@@ -17,6 +17,9 @@ return [
             'endtime' => 'endtime',
         ],
         'searchFields' => 'albumhash',
+        'security' => [
+            'ignorePageTypeRestriction' => true,
+        ],
         'iconfile' => 'EXT:wok_photostation/Resources/Public/Icons/tx_wokphotostation_domain_model_display.gif'
     ],
     'types' => [
