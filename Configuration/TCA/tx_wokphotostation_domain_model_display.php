@@ -1,11 +1,10 @@
 <?php
+$versionInformation = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Information\Typo3Version::class);
 return [
     'ctrl' => [
         'title' => 'LLL:EXT:wok_photostation/Resources/Private/Language/locallang_db.xlf:tx_wokphotostation_domain_model_display',
         'label' => 'albumhash',
         'tstamp' => 'tstamp',
-        'crdate' => 'crdate',
-        'cruser_id' => 'cruser_id',
         'versioningWS' => true,
         'languageField' => 'sys_language_uid',
         'transOrigPointerField' => 'l10n_parent',
@@ -40,8 +39,10 @@ return [
                 'type' => 'select',
                 'renderType' => 'selectSingle',
                 'default' => 0,
-                'items' => [
+                'items' => $versionInformation->getMajorVersion() < 12 ? [
                     ['', 0],
+                ] : [
+                    ['label' => '', 'value' => ''],
                 ],
                 'foreign_table' => 'tx_wokphotostation_domain_model_display',
                 'foreign_table_where' => 'AND {#tx_wokphotostation_domain_model_display}.{#pid}=###CURRENT_PID### AND {#tx_wokphotostation_domain_model_display}.{#sys_language_uid} IN (-1,0)',
@@ -58,12 +59,14 @@ return [
             'config' => [
                 'type' => 'check',
                 'renderType' => 'checkboxToggle',
-                'items' => [
+                'items' => $versionInformation->getMajorVersion() < 12 ? [
                     [
                         0 => '',
                         1 => '',
                         'invertStateDisplay' => true
-                    ]
+                    ],
+                ] : [
+                    ['label' => '', 'value' => '', 'invertStateDisplay' => true],
                 ],
             ],
         ],
@@ -72,7 +75,7 @@ return [
             'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.starttime',
             'config' => [
                 'type' => 'input',
-                'renderType' => 'inputDateTime',
+                'renderType' => 'datetime',
                 'eval' => 'datetime,int',
                 'default' => 0,
                 'behaviour' => [
@@ -85,7 +88,7 @@ return [
             'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.endtime',
             'config' => [
                 'type' => 'input',
-                'renderType' => 'inputDateTime',
+                'renderType' => 'datetime',
                 'eval' => 'datetime,int',
                 'default' => 0,
                 'range' => [
