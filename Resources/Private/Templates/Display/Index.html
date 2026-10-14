@@ -1,4 +1,4 @@
-<html xmlns:f="https://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 	<f:layout name="Default" />
 
 	This Template is responsible for creating a table of domain objects.
@@ -13,6 +13,11 @@
 	Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 	<f:section name="content">
+		<!-- JS & CSS direkt über Fluid im Header laden (TYPO3 v12 / v13 / v14 Standard) -->
+		<f:if condition="{settings.jsSourceFile}">
+		    <f:asset.script identifier="tx_wokphotostation_js" src="{settings.jsSourceFile}" priority="true" />
+		</f:if>
+
 		<div id="c{uid}" class="frame default photostation">
 
 		<f:if condition="{settings.debug} == 'true'">

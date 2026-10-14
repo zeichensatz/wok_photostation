@@ -1,28 +1,32 @@
 <?php
 defined('TYPO3') or die('Access denied.');
 
-\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
+
+$pluginSignature = 'wokphotostation_albumdisplay';
+
+// 1. Plugin registrieren
+ExtensionUtility::registerPlugin(
     'WokPhotostation',
     'Albumdisplay',
-    'PhotoStation album display'
-);
-## EXTENSION BUILDER DEFAULTS END TOKEN - Everything BEFORE this line is overwritten with the defaults of the extension builder
-/***************
- * Above: Register plugin for selection in the backend plugin list
- */
-
-/***************
- * Add flexForms for content element configuration
- */
-$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist']['wokphotostation_albumdisplay'] = 'pi_flexform';
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
-    // plugin signature: <extension key without underscores> '_' <plugin name in lowercase>
-    'wokphotostation_albumdisplay',
-    // Flexform configuration schema file
-    'FILE:EXT:wok_photostation/Configuration/FlexForms/Albumdisplay.xml'
+    'PhotoStation album display',
+    'EXT:wok_photostation/Resources/Public/Icons/Extension.svg',
+    ExtensionUtility::PLUGIN_TYPE_CONTENT_ELEMENT
 );
 
-/***************
- * Deactivate pages and recursive in tab "plugin" of content element 
- */
-$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist']['wokphotostation_albumdisplay'] = 'pages,recursive';
+// 2. FlexForm-Datenstruktur über die offizielle API an den CType binden
+ExtensionManagementUtility::addPiFlexFormValue(
+    '*', // Wildcard steuert, dass das FlexForm über die Signatur geladen wird
+    'FILE:EXT:wok_photostation/Configuration/FlexForms/Albumdisplay.xml',
+    $pluginSignature
+);
+
+// 3. Dem Inhaltselement mitteilen, dass das pi_flexform-Feld eingeblendet werden soll
+// Nutzt die Core-Hilfsmethode, um das Feld sauber nach dem Header-Bereich zu platzieren
+ExtensionManagementUtility::addToAllTCAtypes(
+    'tt_content',
+    'pi_flexform',
+    $pluginSignature,
+    'after:palette:headers'
+);
