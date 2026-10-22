@@ -6,7 +6,7 @@ use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
 
 $pluginSignature = 'wokphotostation_albumdisplay';
 
-// 1. Plugin registrieren
+// 1. Inhaltselement/Plugin registrieren
 ExtensionUtility::registerPlugin(
     'WokPhotostation',
     'Albumdisplay',
@@ -15,15 +15,12 @@ ExtensionUtility::registerPlugin(
     ExtensionUtility::PLUGIN_TYPE_CONTENT_ELEMENT
 );
 
-// 2. FlexForm-Datenstruktur über die offizielle API an den CType binden
-ExtensionManagementUtility::addPiFlexFormValue(
-    '*', // Wildcard steuert, dass das FlexForm über die Signatur geladen wird
-    'FILE:EXT:wok_photostation/Configuration/FlexForms/Albumdisplay.xml',
-    $pluginSignature
-);
+// 2. FlexForm-Datenstruktur direkt an das TCA des Inhaltselements binden (Ersetzt addPiFlexFormValue)
+$GLOBALS['TCA']['tt_content']['types'][$pluginSignature]['columnsOverrides']['pi_flexform']['config']['ds'] = [
+    'default' => 'FILE:EXT:wok_photostation/Configuration/FlexForms/Albumdisplay.xml',
+];
 
 // 3. Dem Inhaltselement mitteilen, dass das pi_flexform-Feld eingeblendet werden soll
-// Nutzt die Core-Hilfsmethode, um das Feld sauber nach dem Header-Bereich zu platzieren
 ExtensionManagementUtility::addToAllTCAtypes(
     'tt_content',
     'pi_flexform',
